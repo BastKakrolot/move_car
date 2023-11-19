@@ -4,10 +4,10 @@ import config from './config.js';
 const { tel } = config;
 const defaultMessage = '我秦始皇！挪车！';
 const moveCar = () => {
-    window.location.href = `tel:${tel}#mp.weixin.qq.com`;
+    window.location.href = `tel:${tel}`;
 };
 const postMessage = () => {
-    window.location.href = `sms:${tel}?body=${defaultMessage}#mp.weixin.qq.com`;
+    window.location.href = `sms:${tel}?body=${defaultMessage}`;
 };
 </script>
 

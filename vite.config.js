@@ -9,5 +9,8 @@ export default defineConfig({
         preprocessorOptions: {
             less: true
         }
+    },
+    build: {
+        outDir: './dist'
     }
 });
