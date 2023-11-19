@@ -1,5 +1,5 @@
 <script setup>
-import { Button, Space, Avatar } from 'ant-design-vue';
+import { Button } from 'vant';
 import config from './config.js';
 const data = new URLSearchParams(window.location.search);
 const tel = data.get('tel') || config.tel;
@@ -14,30 +14,26 @@ const postMessage = () => {
 </script>
 
 <template>
-    <div class="main-page flex flex-col items-center justify-center w-full h-full">
-        <Space direction="vertical" align="center" :size="40">
-            <Space>
-                <Avatar class="avatar" :size="100" src="/avatar.jpeg"> </Avatar>
-            </Space>
-            <Space direction="vertical" :size="40">
-                <Button @click="moveCar">电话挪车</Button>
-                <Button @click="postMessage">短信挪车</Button>
-            </Space>
-            <Space wrap :size="40">
-                <div class="h-[100px]"></div>
-            </Space>
-        </Space>
-        <div
-            class="flex mt-8 flex-col justify-center items-center gap-1 !text-default-600 dark:!text-default-500 font-extralight text-sm"
-        >
+    <div
+        class="main-page flex flex-col items-center justify-center w-full h-full py-[3vh] bg-[url('/cofe.jpeg')] bg-cover font-sans">
+        <div style="backdrop-filter: blur(8px);"
+            class="flex-1 shadow-2xl rounded-xl w-[90vw] bg-white/20 flex  items-center p-[30px] justify-around flex-col">
+            <div>
+                <img src="/slogan.png" class="w-full" />
+                <img src="/callme.png" class="w-full" />
+            </div>
+            <img src="/car.png" style="transform: scaleX(-1);" class="w-full scale-x-[-1]" />
+            <div class="w-full flex flex-col gap-8">
+                <Button class="w-full shadow-2xl" color="#323232" style="backdrop-filter: blur(8px);" @click="moveCar">电话：{{
+                    tel
+                }}</Button>
+                <Button class="w-full" color="#454545" style="backdrop-filter: blur(8px);" @click="postMessage">短信</Button>
+            </div>
+        </div>
+        <div class="flex py-[10px] flex-col justify-center items-center gap-1 flex-none text-black/70 text-[12px]">
             <p>
                 备案号:&nbsp;
-                <a
-                    class="text-sm"
-                    target="_blank"
-                    href="https://beian.miit.gov.cn/"
-                    rel="noreferrer"
-                >
+                <a class="text-blue-950" target="_blank" href="https://beian.miit.gov.cn/" rel="noreferrer">
                     鄂ICP备2021009860号
                 </a>
             </p>

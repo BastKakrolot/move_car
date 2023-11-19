@@ -1,7 +1,8 @@
-@tailwind base;
+@import 'vant/lib/index.css';
+
+/* @tailwind base; */
 @tailwind components;
 @tailwind utilities;
-
 *{
   box-sizing: border-box;
   margin: 0;

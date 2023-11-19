@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@ant-design/icons-vue": "^7.0.1",
-    "ant-design-vue": "4.x",
+    "vant": "^4.8.0",
     "vue": "^3.3.4"
   },
   "devDependencies": {
