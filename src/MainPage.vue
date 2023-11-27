@@ -9,7 +9,7 @@ const moveCar = () => {
     window.location.href = `tel:${tel}`;
 };
 const postMessage = () => {
-    window.location.href = `sms:${tel}${message || `?body=${message}`}`;
+    window.location.href = `sms:${tel}${message && `?body=${message}`}`;
 };
 </script>
 
@@ -29,14 +29,14 @@ const postMessage = () => {
             <div class="w-full flex flex-col gap-8 items-center">
                 <Button
                     class="w-[100px] h-[100px] shadow-2xl rounded-full bg-transparent border-[#323232] border-2 text-[#323232]"
-                    style="backdrop-filter: blur(50px)"
+                    style="backdrop-filter: blur(5px)"
                     @click="moveCar"
                 >
                     <PhoneOutlined class="w-[35px]" />
                 </Button>
                 <Button
                     class="w-[180px] rounded-full bg-transparent border-[#323232] border-2 font-bold text-[#323232]"
-                    style="backdrop-filter: blur(50px)"
+                    style="backdrop-filter: blur(5px)"
                     @click="postMessage"
                 >
                     <div class="flex items-center justify-center gap-2">
