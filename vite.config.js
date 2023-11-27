@@ -10,6 +10,9 @@ export default defineConfig({
             less: true
         }
     },
+    server: {
+        port: 8080
+    },
     build: {
         outDir: './dist'
     }
