@@ -9,7 +9,7 @@ const moveCar = () => {
     window.location.href = `tel:${tel}`;
 };
 const postMessage = () => {
-    window.location.href = `sms:${tel}${message && `?body=${message}`}`;
+    window.location.href = `sms:${tel}${message ? `?body=${message}` : ''}`;
 };
 </script>
 
